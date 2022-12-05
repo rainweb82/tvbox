@@ -1,74 +1,89 @@
+///写法思路来自biubiu影院，海阔视界，xpath筛选。
+//项目魔改至github开源仓库https://github.com/Tangsan99999/TvJar中的XBiubiu.java文件，
+
 {
-  "author": "20220611",
-  "name": "斗鱼",
-  "url": "https://www.douyu.com/", //填网站链接
-  "tihuan": "cnzz.com", //这个不用动，是个别网站嗅探时过滤地址用的
-  "User": "空", //这个不用动，是个别网站播放需要请求头时才用到
-  "shouye": "1",
-  "横图显示": "1",
-
-  "fenlei": "网游竞技$gapi/rkc/directory/mixList/1_1/#单机热游$gapi/rkc/directory/mixList/1_15/#手游休闲$gapi/rkc/directory/mixList/1_9/#娱乐天地$gapi/rkc/directory/mixList/1_2/#科技文化$gapi/rkc/directory/mixList/1_11/#语音互动$gapi/rkc/directory/mixList/1_20/#语音直播$gapi/rkc/directory/mixList/1_18/#正能量$gapi/rkc/directory/mixList/1_13/#颜值$gapi/rkc/directory/mixList/2_201/#音乐$gapi/rkc/directory/mixList/2_175/#舞蹈$gapi/rkc/directory/mixList/2_1008/#二次元$gapi/rkc/directory/mixList/2_174/#户外$gapi/rkc/directory/mixList/2_124/#美食$gapi/rkc/directory/mixList/2_194/#互动交友$gapi/rkc/directory/mixList/2_1555/#一起看$gapi/rkc/directory/mixList/2_208/#趣生活$gapi/rkc/directory/mixList/2_1097/#数码科技$gapi/rkc/directory/mixList/2_134/#文化$gapi/rkc/directory/mixList/2_195/#科普$gapi/rkc/directory/mixList/2_204/#社会人文$gapi/rkc/directory/mixList/2_1162/#汽车$gapi/rkc/directory/mixList/2_136/#纪录片$gapi/rkc/directory/mixList/2_514/#斗鱼购物$gapi/rkc/directory/mixList/2_1203/#交友$gapi/rkc/directory/mixList/2_1221/#电台$gapi/rkc/directory/mixList/2_1556/#一起玩$gapi/rkc/directory/mixList/2_1575/#音乐之声$gapi/rkc/directory/mixList/2_910/#正能量$gapi/rkc/directory/mixList/2_250/#英雄联盟$gapi/rkc/directory/mixList/2_1/#热门游戏$gapi/rkc/directory/mixList/2_270/#DOTA2$gapi/rkc/directory/mixList/2_3/#穿越火线$gapi/rkc/directory/mixList/2_33/#CFHD$gapi/rkc/directory/mixList/2_1997/#DNF$gapi/rkc/directory/mixList/2_40/#炉石传说$gapi/rkc/directory/mixList/2_2/#CS:GO$gapi/rkc/directory/mixList/2_6/#逆战$gapi/rkc/directory/mixList/2_46/#lol云顶之弈$gapi/rkc/directory/mixList/2_917/#魔兽争霸$gapi/rkc/directory/mixList/2_55/#魔兽怀旧服$gapi/rkc/directory/mixList/2_1055/#网易游戏$gapi/rkc/directory/mixList/2_3567/#守望先锋$gapi/rkc/directory/mixList/2_148/#DOTA$gapi/rkc/directory/mixList/2_217/#魔兽世界$gapi/rkc/directory/mixList/2_5/#天涯明月刀$gapi/rkc/directory/mixList/2_59/#三国杀$gapi/rkc/directory/mixList/2_14/#主机游戏$gapi/rkc/directory/mixList/2_19/#永劫无间$gapi/rkc/directory/mixList/2_1227/#生死狙击2$gapi/rkc/directory/mixList/2_1781/#迷失ARK$gapi/rkc/directory/mixList/2_3528/#艾尔登法环$gapi/rkc/directory/mixList/2_3406/#逃离塔科夫$gapi/rkc/directory/mixList/2_1024/#V Rising$gapi/rkc/directory/mixList/2_3684/#海上狼人杀$gapi/rkc/directory/mixList/2_3556/#怀旧游戏$gapi/rkc/directory/mixList/2_26/#王者荣耀$gapi/rkc/directory/mixList/2_181/#和平精英$gapi/rkc/directory/mixList/2_350/#火影忍者$gapi/rkc/directory/mixList/2_196/#LOL手游$gapi/rkc/directory/mixList/2_1920/#金铲铲之战$gapi/rkc/directory/mixList/2_2556/#重返帝国$gapi/rkc/directory/mixList/2_2915/#COD手游$gapi/rkc/directory/mixList/2_767/#哈利波特：魔法觉醒$gapi/rkc/directory/mixList/2_1192/#CF手游$gapi/rkc/directory/mixList/2_178/#欢乐斗地主$gapi/rkc/directory/mixList/2_416/#原神$gapi/rkc/directory/mixList/2_1223/#天刀手游$gapi/rkc/directory/mixList/2_911/#棋牌娱乐$gapi/rkc/directory/mixList/2_113/#欢乐麻将$gapi/rkc/directory/mixList/2_451/#新游中心$gapi/rkc/directory/mixList/2_229/#QQ飞车$gapi/rkc/directory/mixList/2_331/#阴阳师$gapi/rkc/directory/mixList/2_240/#热门手游$gapi/rkc/directory/mixList/2_30/", //网站列表的分类
-  "houzhui": "", //网站翻页链接的后缀
-
-  "shifouercijiequ": "0", //截取的列表数组是否需要二次截取，0不需要，1需要
-  "jiequqian": "空", //不需要二次截取就填空
-  "jiequhou": "空", //不需要二次截取就填空
-  "jiequshuzuqian": "\"type\":1", //截取的列表数组的前关键词,截取的关键词有 " 的用 \ 进行转义
-  "jiequshuzuhou": "\"rs16\"", //截取的列表数组的后关键词,截取的关键词有 " 的用 \ 进行转义
-  "tupianqian": "\"rs1\":\"", //列表中资源的图片前关键词,截取的关键词有 " 的用 \ 进行转义
-  "tupianhou": "\"", //列表中资源的图片后关键词,截取的关键词有 " 的用 \ 进行转义
-  "biaotiqian": "\"rn\":\"", //列表中资源的标题前关键词,截取的关键词有 " 的用 \ 进行转义
-  "biaotihou": "\"", //列表中资源的标题后关键词,截取的关键词有 " 的用 \ 进行转义
-  "lianjieqian": "\"rid\":", //列表中资源的详情页跳转链接前关键词,截取的关键词有 " 的用 \ 进行转义
-  "lianjiehou": ",\"", //列表中资源的详情页跳转链接后关键词,截取的关键词有 " 的用 \ 进行转义
-
-  //新版Biubiu参数：副标题 (不需要的话，就不填写或者删除副标题2个字段也可以。)
-  "fubiaotiqian": "\"nn\":\"",
-  "fubiaotihou": "\"",
-
-
-  //搜索部分基本不用动，现在网站基本都是苹果CMS，所有搜索是固定的。
-  "sousuoqian": "/japi/search/api/searchShow?kw=",
-  "sousuohou": "&page=1&pageSize=50",
-  "sousuohouzhui": "/", //搜索页影片跳转详情页的中间标识链接部分
-  "ssmoshi": "0",
-  "sousuoshifouercijiequ": "0",
-  "jspic": "roomSrc",
-  "jsname": "roomName",
-  "jsid": "rid",
-  "ssjiequqian": "空",
-  "ssjiequhou": "空",
-  "ssjiequshuzuqian": "空",
-  "ssjiequshuzuhou": "空",
-  "sstupianqian": "空",
-  "sstupianhou": "空",
-  "ssbiaotiqian": "空",
-  "ssbiaotihou": "空",
-  "sslianjieqian": "空",
-  "sslianjiehou": "空",
-
-  "bfshifouercijiequ": "0",
-  "bfjiequqian": "空",
-  "bfjiequhou": "空",
-  "bfjiequshuzuqian": "left\"><div class=\"Title", //播放截取的列表数组的前关键词
-  "bfjiequshuzuhou": "</a>", //播放截取的列表数组的后关键词
-
-  "zhuangtaiqian": "Header-logo\" title=\"", //状态前关键词
-  "zhuangtaihou": "\"", //状态后关键词
-  "daoyanqian": "Title-anchorNameH2\">", //导演前关键词
-  "daoyanhou": "</h2>", //导演态后关键词
-  "zhuyanqian": "canonical\" href=\"", //主演前关键词
-  "zhuyanhou": "\"", //主演后关键词
-  "juqingqian": "is-announceTxt\">", //剧情前关键词
-  "juqinghou": "</p>", //剧情后关键词
-
-  "bfyshifouercijiequ": "0", //截取的播放列表数组是否需要二次截取，0不需要，1需要
-  "bfyjiequqian": "空", //不需要二次截取就填空
-  "bfyjiequhou": "空", //不需要二次截取就填空
-  "bfyjiequshuzuqian": "<h3 class=\"Title", //播放剧集数组前关键词
-  "bfyjiequshuzuhou": "target=\"_blank", //播放剧集数组后关键词
-  "bfbiaotiqian": "header\">", //播放剧集标题前关键词
-  "bfbiaotihou": "</h3>", //状播放剧集标题后关键词
-  "bflianjieqian": "rid=", //播放剧集链接前关键词
-  "bflianjiehou": "\""
-} //播放剧集链接后关键词
+    //规则名
+    "title": "斗鱼直播",
+    //作者
+    "author": "聆听优美旋律",
+    //请求头UA,不填则默认okhttp/3.12.11，可填MOBILE_UA或PC_UA使用内置的手机版或电脑版UA
+    //习惯查看手机源码写建议用手机版UA，习惯查看PC版源码写建议用电脑版UA
+    "UserAgent":"MOBILE_UA",
+    //请求头Referer参数，如果只是播放页需要，填WebView即可引用播放页的链接作嗅探Referer参数。
+    //一般很少用，留空或删除
+    "Referer":"",
+    //是否开启获取首页数据，0关闭，1开启
+    "homeContent":"0",
+    //分类链接起始页码,禁止负数和含小数点。
+    "firstpage": "1",
+    //分类链接,{cateId}是分类，{catePg}是页码,第一页没有页码的可以这样写 第二页链接[firstPage=第一页的链接]
+    "class_url": "https://m.douyu.com/api/room/list?page={catePg}&type={cateId}",
+    //分类名，分类1&分类2&分类3
+    "class_name": "英雄联盟&王者荣耀&LOL手游&主机游戏&热门游戏&和平精英&刺客信条:英灵殿&暗区突围&穿越火线&幻塔&火影忍者&CFHD&使命召唤&COD手游&哈利波特：魔法觉醒&lol电竞经理&DNF手游&金铲铲之战&天刀手游&原神&航海王热血航线&万国觉醒&马里奥制造&鸿图之下&DNF&欢乐麻将&逃离塔科夫&DOTA2&王者模拟战&炉石传说&二次元&中国象棋&命运2&CS:GO&天谕手游&一起看&巅峰坦克&新游中心&墲人之境&VALORANT&lol云顶之弈&颜值（横屏）&音乐&热门手游&APEX手游&Evil Dead&Among Us&魔兽争霸&户外&梦幻手游&恐怖游戏&魔兽怀旧服&QQ飞车&荒野大镖客&九劫曲&自走棋&美食&第五人格&欢乐斗地主&荒野乱斗&灵魂筹码&传奇&原创IP&互动交友&跑跑卡丁车&阴阳师&骑马与砍杀&网易游戏&星际争霸&音遇恋人&狼人杀&只狼&格斗游戏&舞蹈&JJ斗地主&街霸对决&人类跌落梦境&机动都市阿尔法&一人之下&饥荒&全境封锁&怀旧游戏&趣生活&多多自走棋&战地风云&隐形守护者&守望先锋&电台新声&崩坏3&ATLAS&DOTA&娱乐推荐&风云岛行动&进击的巨人&魔兽世界&云游戏&NBA2K&八方旅人&跑跑手游&血污：夜之仪式&剑网3&率土之滨&人类一败涂地&我的世界&灌篮高手&挺进地牢&超激斗梦境&冒险岛&三国杀&环世界&梦幻西游&皇室战争&古墓丽影&天涯明月刀&王牌战士&街头篮球&颜值&战歌竞技场&波西亚时光&NBA2KOL2&忍者必须死3&鬼泣&QQ飞车端游&神武4手游&战地之王&军事游戏&梦幻模拟战&往日不再&文化&棋牌娱乐&实况足球&仙剑奇侠传&企鹅直播&FIFA ONLINE 4&剑与远征&神秘海域&热门网游&航海王：燃烧意志&诛仙世界&千古风流&塞尔达系列&数码科技&APEX&百闻牌&僵尸世界大战&社会人文&流放之路POE&球球大作战&汽车&剑网3缘起&逆水寒&英雄杀&足球游戏&科普&风暴英雄&魔域口袋版&橙光&逆战&梦幻三维版&莎木&纪录片&口袋新旅程&圣歌&斗鱼购物&坦克世界&战舰世界&巫师之昆特牌&了不起的修仙模拟器&成年教育&反恐精英Online&剑网3：指尖江湖&女神异闻录&星星点灯&暗黑破坏神3&部落冲突&剑与家园&斯普拉遁&梦三国2&新笑傲江湖&超级马里奥&校园&传奇世界&猫和老鼠&三国志系列&方舟：生存进化&猎人手游&星际公民&刀塔霸业&明日之后&最终幻想&神武4电脑版&影之诗&中土世界：战争之影&群雄逐鹿&流放者柯南&堡垒之夜&决战平安京",
+    //分类名替换词，替换词1&替换词2&替换词3，替换词包含英文&的用两个中文＆＆代替，示例：＆＆id=0&＆＆id=1
+    "class_value": "LOL&wzry&LOLM&TVgame&rmyx&hpjy&AC&aqtw&CF&ht&hyrz&CFHD&COD&smzhsy&HarryPotter&EGAME&mdnf&JGAME&tdsy&yuanshen&HHWRXHX&wgjx&Mario&htzx&DNF&HLMJ&EFT&DOTA2&wzrpg&How&ecy&ZGXQ&MY2&CSGO&tysy&yqk&DFTK&xyzx&wu&VALORANT&ydzhy&XX&music&phone&APEXM&EvilDead&AmongUs&mszb&HW&mhxy&Horror&wowclassic&qqfcsy&hydbk&jjq&dota2rpg&ms&dwrg&hlddz&hyld&lhcm&cq&ip&jyhd&Popkart&yys&qmyks&wyyx&SC&yinyu&LRS&ZL&FTG&dance&jj&jbdj&rlybtdsjb&jddsaef&yrzx&DontStarve&qjfs&classic&QSH&zzq&BF&yxshz&Overwatch&dtxs&bhxl&ATLAS&DOTA&yltj&fydxd&AoT&WOW&cloudgame&NBA2K&OT&PPKDCSY&Blood&JX3&stzb&Human&MC&glgs&Enter&cjdmj&g_mxd1&sanguosha&RimWorld&MHXYOL&hszz&gmly&tianya&wpzs&jtlq&yz&ChessRush&bxysg&NBA2KOL2&rzbxs3&DMC&qqfcdy&sw3&AVA&jsyx&mhmnz&WRBZ&wh&qipai&skzq&PAL&qezb&FOL4&jyyz&Uncharted&rmwy&hhwrsyz&zxsj&qgflpc&TLoZ&smkj&APEX&BWP&WWZ&shrw&PathofExile&qqdzz&car&JW3YQ&nsh&yxs&zq&kepu&HOTS&mykdb&cg&NZ&MHXX3D&Shenmue&jlp&KDXLC&sg&DYGW&TKSJ&wfws&wszktp&ACS&jiaoyu&CS&jw3zjjh&P5&xxdd&DIABLO3&blct&jyjy&Splatoon&msg2&xxajh&SMO&xy&cqsj&mhls&Sangokushi&fzscjh&lrlr&StarCitizen&DotaUnderlords&mrzh&FF&swdnb&yzs&MiddleEarth&qxzl&Conan&blzy&jzpaj",
+    //筛选数据，json格式，参考xpath的筛选写法
+    "filterdata":{},
+    
+    "cat_mode": "0",
+    "catjsonlist": "data.list",
+    //json片单图片
+    "catjsonpic": "roomSrc",
+    //json片单标题
+    "catjsonname": "roomName",
+    //json片单链接
+    "catjsonid": "rid",
+    //json片单副标题，这个很少有，预留着
+    "catjsonstitle":"nickname",
+    
+    
+    //分类片单链接补前缀  
+    "cat_prefix": "",
+    //分类片单链接补后缀
+    "cat_suffix": "",
+    
+    //搜索链接，搜索关键字用{wd}表示，post请求的最后面加;post
+    //POST链接示例 http://www.lezhutv.com/index.php?m=vod-search;post
+    "search_url": "https://m.douyu.com/api/search/liveRoom;post",
+    //POST搜索body，填写搜索关键字的键值，一般常见的是searchword和wd，不是POST搜索的可留空或删除。
+    "sea_PtBody":{"sk":"{wd}","offset":0,"limit":20,"did":"bf1f5579c0b2f6066af0bee200051531"},
+    //搜索模式,0为json搜索，只支持列表在list数组里的，其它为网页截取。
+    "search_mode": "0",
+    "jsonlist": "data.list",
+    //json片单图片
+    "jsonpic": "roomSrc",
+    //json片单标题
+    "jsonname": "roomName",
+    //json片单链接
+    "jsonid": "roomId",
+    //json片单副标题，这个很少有，预留着
+    "jsonstitle":"nickname",
+    
+    //搜索片单链接补前缀
+    "search_prefix": "",
+    //搜索片单链接补后缀，这个一般json搜索的需要
+    "search_suffix": "",
+    //搜索副标题，截取前缀&&截取后缀
+    "sea_subtitle": "",
+    
+    //片单链接是否直接播放，0否，1分类片单链接直接播放，2详情选集链接直接播放。
+    //设置成直接播放后，后面3个参数请注意该留空的请务必留空。
+    "force_play": "1",
+    //直接播放链接补前缀
+    "play_prefix": "https://m.douyu.com/",
+    //直接播放链接补后缀，设置为#isVideo=true#可强制识别为视频链接
+    "play_suffix": "",
+    //直接播放链接设置请求头，只对直链视频有效，每一组用#分开
+    "play_header": "",
+    
+    //下面几个参数请勿乱用。否则可能会有副作用。
+    //分析网页源码中有<script type="text/javascript">var player_aaaa={"flag":"play","encrypt这种源码的链接解析
+    //如果网页源码里没有这种请设置为0
+    "Anal_MacPlayer":"0",
+    //是否开启手动嗅探，只对网页嗅探有效，0否，1是
+    "ManualSniffer":"0",
+    //手动嗅探视频链接关键字，每个用#隔开
+    "VideoFormat":".mp4#.m3u8#.flv",
+    //手动嗅探视频链接过滤关键词,每个用#隔开
+    "VideoFilter":".html#=http"
+}
