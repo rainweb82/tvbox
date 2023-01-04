@@ -1,7 +1,7 @@
 {
   "author": "20220711",
   "name": "欧乐影院",
-  "url": "https://oulevod.tv", //填网站链接
+  "url": "https://olevod.live", //填网站链接
   "tihuan": "cnzz.com", //这个不用动，是个别网站嗅探时过滤地址用的
   "User": "空", //这个不用动，是个别网站播放需要请求头时才用到
   "shouye": "1",
@@ -28,7 +28,7 @@
 
   //搜索部分基本不用动，现在网站基本都是苹果CMS，所有搜索是固定的。
   "sousuoqian": "/index.php/ajax/suggest?mid=1&wd=",
-  "sousuohou": "&limit=500",
+  "sousuohou": "",
   "sousuohouzhui": "/index.php/vod/detail/id/", //搜索页影片跳转详情页的中间标识链接部分
   "ssmoshi": "0",
   "sousuoshifouercijiequ": "0",
