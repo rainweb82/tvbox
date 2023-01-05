@@ -30,7 +30,7 @@
 
 
   "sousuoqian": "/index.php/ajax/suggest?mid=1&wd=",
-  "sousuohou": "&limit=500",
+  "sousuohou": "",
   "sousuohouzhui": "/detail/",
   "ssmoshi": "0",
   "sousuoshifouercijiequ": "0",

@@ -4,7 +4,7 @@
   "url": "https://movie.douban.com", //填网站链接
   "shouye": "1", //热门推荐
 
-  "fenlei": "热播电影$/j/search_subjects?type=movie&tag=热门&page_start=#热门剧集$/j/search_subjects?type=tv&tag=热门&page_start=#综艺$/j/search_subjects?type=tv&tag=综艺&page_start=#动画$/j/search_subjects?type=tv&tag=日本动画&page_start=#高分电影$/j/search_subjects?type=movie&tag=豆瓣高分&page_start=#冷门佳片$/j/search_subjects?type=movie&tag=冷门佳片&page_start=#新片$/j/search_subjects?type=movie&tag=最新&page_start=#港片$/j/search_subjects?type=movie&tag=香港&page_start=#欧美$/j/search_subjects?type=movie&tag=欧美&page_start=#日韩$/j/search_subjects?type=movie&tag=日韩&page_start=#港剧$/j/search_subjects?type=tv&tag=港剧&page_start=#国产剧$/j/search_subjects?type=tv&tag=国产剧&page_start=#美剧$/j/search_subjects?type=tv&tag=美剧&page_start=#英剧$/j/search_subjects?type=tv&tag=英剧&page_start=#日剧$/j/search_subjects?type=tv&tag=日剧&page_start=#韩剧$/j/search_subjects?type=tv&tag=韩剧&page_start=#纪录片$/j/search_subjects?type=tv&tag=纪录片&page_start=", //网站列表的分类
+  "fenlei": "热播电影$/j/search_subjects?type=movie&tag=热门&page_start=#热门剧集$/j/search_subjects?type=tv&tag=热门&page_start=#高分电影$/j/search_subjects?type=movie&tag=豆瓣高分&page_start=#冷门佳片$/j/search_subjects?type=movie&tag=冷门佳片&page_start=#新片$/j/search_subjects?type=movie&tag=最新&page_start=#港片$/j/search_subjects?type=movie&tag=香港&page_start=#欧美$/j/search_subjects?type=movie&tag=欧美&page_start=#日韩$/j/search_subjects?type=movie&tag=日韩&page_start=#国产剧$/j/search_subjects?type=tv&tag=国产剧&page_start=#美剧$/j/search_subjects?type=tv&tag=美剧&page_start=#英剧$/j/search_subjects?type=tv&tag=英剧&page_start=#日剧$/j/search_subjects?type=tv&tag=日剧&page_start=#韩剧$/j/search_subjects?type=tv&tag=韩剧&page_start=", //网站列表的分类
   "houzhui": "&page_limit=10", //网站翻页链接的后缀
 
   "shifouercijiequ": "0", //截取的列表数组是否需要二次截取，0不需要，1需要
@@ -21,14 +21,14 @@
   "lianjieqian": "movie.douban.com", //列表中资源的详情页跳转链接前关键词,截取的关键词有 " 的用 \ 进行转义
   "lianjiehou": "\"", //列表中资源的详情页跳转链接后关键词,截取的关键词有 " 的用 \ 进行转义
   "ljqianzhui": "", //链接前缀,截取的关键词有 " 的用 \ 进行转义
-  "ljhouzhui": "", //链接后缀,截取的关键词有 " 的用 \ 进行转义
+  "ljhouzhui": "/trailer#trailer", //链接后缀,截取的关键词有 " 的用 \ 进行转义
 
   //搜索部分基本不用动，现在网站基本都是苹果CMS，所有搜索是固定的。
   "sousuoqian": "/j/subject_suggest?q=", //搜索url
   "sousuohou": "",
   "sousuohouzhui": "", //搜索后缀
-  "ssmoshi": "1",
-  "sousuoshifouercijiequ": "0", //
+  "ssmoshi": "1", //搜索模式
+  "sousuoshifouercijiequ": "0", //搜索是否需要二次截取，0不需要，1需要
   "jspic": "img", //JSON图片名
   "jsname": "title", //JSON标题名
   "jsid": "id", //JSON编号名
@@ -42,19 +42,20 @@
   "ssbiaotihou": "\",", //搜索标题后关键词
   "sslianjieqian": "movie.douban.com", //搜索链接前关键词
   "sslianjiehou": "\"", //搜索链接后关键词
+  "ssljhouzhui": "/trailer#trailer", //搜索链接后缀,截取的关键词有 " 的用 \ 进行转义
   
   "xljiequqian": "", //线路名截取前关键词
   "xljiequhou": "", //线路名截取后关键词
-  "xljiequshuzuqian": "", //线路名截取数组前关键词
-  "xljiequshuzuhou": "", //线路名截取数组后关键词
-  "xlbiaotiqian": "class=\"pl\">订阅", //线路名标题前关键词
-  "xlbiaotihou": "<br/>", //线路名标题后关键词
+  "xljiequshuzuqian": "<div class=\"hd\">", //线路名截取数组前关键词
+  "xljiequshuzuhou": "</div>", //线路名截取数组后关键词
+  "xlbiaotiqian": "\">", //线路名标题前关键词
+  "xlbiaotihou": "&nbsp;·", //线路名标题后关键词
 
   "bfshifouercijiequ": "0",
-  "bfjiequqian": "<div id=\"comments-section\">", //播放二次截取前关键词
-  "bfjiequhou": "</i>", //播放二次截取后关键词
-  "bfjiequshuzuqian": "<div id=\"comments-section\">", //播放截取的列表数组的前关键词
-  "bfjiequshuzuhou": "此处是挂载其他页面", //播放截取的列表数组的后关键词
+  "bfjiequqian": "", //播放二次截取前关键词
+  "bfjiequhou": "", //播放二次截取后关键词
+  "bfjiequshuzuqian": "<div class=\"mod\">", //播放截取的列表数组的前关键词
+  "bfjiequshuzuhou": "</ul>", //播放截取的列表数组的后关键词
 
   "zhuangtaiqian": "", //状态前关键词
   "zhuangtaihou": "", //状态后关键词
@@ -70,13 +71,13 @@
   "juqinghou": "</span>", //剧情后关键词
 
   "bfyshifouercijiequ": "0", //截取的播放列表数组是否需要二次截取，0不需要，1需要
-  "bfyjiequqian": "", //不需要二次截取就填空
-  "bfyjiequhou": "", //不需要二次截取就填空
-  "bfyjiequshuzuqian": "comment-content\">", //播放剧集数组前关键词
-  "bfyjiequshuzuhou": "<script>", //播放剧集数组后关键词
-  "bfbiaotiqian": "<span class=\"short\">", //播放剧集标题前关键词
-  "bfbiaotihou": "</span>", //播放剧集标题后关键词
-  "bflianjieqian": "comment-report\"", //播放剧集链接前关键词
-  "bflianjiehou": "data-url=", //播放剧集标题后关键词
+  "bfyjiequqian": "<li>", //不需要二次截取就填空
+  "bfyjiequhou": "</li>", //不需要二次截取就填空
+  "bfyjiequshuzuqian": "<p>", //播放剧集数组前关键词
+  "bfyjiequshuzuhou": "</p>", //播放剧集数组后关键词
+  "bfbiaotiqian": ">                                        ", //播放剧集标题前关键词
+  "bfbiaotihou": "                <", //播放剧集标题后关键词
+  "bflianjieqian": "https://movie.douban.com", //播放剧集链接前关键词
+  "bflianjiehou": "#content", //播放剧集标题后关键词
   "bfqianzhui": "" //播放前缀
 } //播放剧集链接后关键词

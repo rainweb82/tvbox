@@ -2,7 +2,8 @@
 {
   "author": "20220625",
   "name": "奈落影院",
-  "url": "https://newfii.com",
+  //"url": "https://newfii.com",
+  "url": "https://nailuoys.com",
   "tihuan": "cnzz.com",
   "User": "空",
   "shouye": "1",
@@ -28,7 +29,7 @@
 
   
   "sousuoqian": "/index.php/ajax/suggest?mid=1&wd=",
-  "sousuohou": "&limit=500",
+  "sousuohou": "",
   "sousuohouzhui": "/voddetail/",
   "ssmoshi": "0",
   "sousuoshifouercijiequ": "0",
