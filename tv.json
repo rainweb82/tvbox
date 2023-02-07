@@ -6,7 +6,7 @@
 "spider":"./jar/Yoursmile.jar;md5;DDAF13D7923EA1E333EA06ED930778A2",
 
 #直播源
-"lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&type=txt&ext=aHR0cHM6Ly9hZ2l0LmFpL2lhbXJ1aXJ1aS90dmJveC9yYXcvYnJhbmNoL21haW4vbGl2ZS50eHQ="]}]}],
+"lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&type=txt&ext=aHR0cHM6Ly9hZ2l0LmFpL2lhbXJ1aXJ1aS90dmJveC9yYXcvYnJhbmNoL21hc3Rlci9saXZlLnR4dA=="]}]}],
 
 #视频站
 "sites":[
