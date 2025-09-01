@@ -37,7 +37,7 @@ download() {
         fi
     fi
     print "下载主程序"
-    wget -q --show-progress -O $install_path "$download_url"
+    wget -q -O $install_path "$download_url"
     if [ $? -ne 0 ]; then
         print r "下载失败"
         exit 1
